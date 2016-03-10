@@ -1,6 +1,7 @@
 var gutil = require('gulp-util')
 var through = require('through2')
 var exec = require('child_process').exec
+var chalk = require('chalk')
 
 /**
  * Builds shell command for PHPMD according to specified options.
