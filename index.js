@@ -52,7 +52,7 @@ var phpmdPlugin = function(options) {
       if (error) {
         var message = 'PHP Code Sniffer found a ' + chalk.yellow('problem')
                     + ' in ' + chalk.magenta(file.path) + '\n\t'
-                    + report.output.replace(/\n/g, '\n\t');
+                    + stdout.replace(/\n/g, '\n\t');
         stream.emit('error', new gutil.PluginError('gulp-phpmd', message))
         callback()
 
