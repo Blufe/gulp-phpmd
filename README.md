@@ -18,14 +18,14 @@ var gulp = require('gulp');
 var phpmd = require('gulp-phpmd');
 
 gulp.task('default', function () {
-    return gulp.src(['src/**/*.php', '!src/vendor/**/*.*'])
-        // Validate code using PHP Mess Detector
-        .pipe(phpmd({
-            bin: 'src/vendor/bin/phpmd',
-            format: 'text',
-            ruleset: 'unusedcode',
-        }))
-        .on('error', console.error)
+  return gulp.src(['src/**/*.php', '!src/vendor/**/*.*'])
+    // Validate code using PHP Mess Detector
+    .pipe(phpmd({
+      bin: 'src/vendor/bin/phpmd',
+      format: 'text',
+      ruleset: 'unusedcode'
+    }))
+    .on('error', console.error)
 });
 ```
 
