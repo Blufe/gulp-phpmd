@@ -25,6 +25,10 @@ var buildCommand = function(file, opt) {
   if (opt.hasOwnProperty('strict')) {
     command += ' --strict'
   }
+  
+  if (opt.hasOwnProperty('reportfile')) {
+    command += ' --reportfile="' + opt.reportfile + '"'
+  }
 
   return command
 }
